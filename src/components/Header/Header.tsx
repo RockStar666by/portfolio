@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import logo from '../../logo.svg';
+import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
 export const Header = () => {
   return (
@@ -11,13 +12,34 @@ export const Header = () => {
       </div>
       <nav className="header-nav">
         <ul className="header-nav-list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>My CV</li>
-          <li>Contacts</li>
+          <li className="header-nav-list-li">
+            <a className="nav-link" href="#">
+              Home
+            </a>
+          </li>
+          <li className="header-nav-list-li">
+            <a className="nav-link" href="#">
+              About
+            </a>
+          </li>
+          <li className="header-nav-list-li">
+            <a className="nav-link" href="#">
+              Projects
+            </a>
+          </li>
+          <li className="header-nav-list-li">
+            <a className="nav-link" href="#">
+              My CV
+            </a>
+          </li>
+          <li className="header-nav-list-li">
+            <a className="nav-link" href="#">
+              Contacts
+            </a>
+          </li>
         </ul>
       </nav>
+      <WeatherAPI />
     </header>
   );
 };

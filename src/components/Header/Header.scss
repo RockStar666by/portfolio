@@ -1,3 +1,12 @@
+.App-header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+}
+
 .header-logo {
   position: absolute;
   left: 60px;
@@ -13,10 +22,65 @@
 }
 
 .header-text {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 500;
 }
 
+.header-nav {
+  margin: auto;
+}
+
 .header-nav-list {
+  position: relative;
   list-style-type: none;
+  width: 600px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav-list-li {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: grey;
+  border-radius: 10px;
+  background: white;
+
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
+  -moz-box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
+  box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
+}
+
+.header-nav-list-li:hover {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: box-shadow 0.4s;
+  background: linear-gradient(
+    45deg,
+    rgb(158, 227, 211, 1),
+    rgb(65, 158, 172, 1)
+  );
+  box-shadow: 0 4px 15px 0 rgba(34, 189, 183, 0.75);
+  background-origin: border-box;
+  color: white;
+}
+
+.header-nav-list-li:focus {
+  outline: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  height: inherit;
 }
