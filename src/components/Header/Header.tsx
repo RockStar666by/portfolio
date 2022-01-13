@@ -1,9 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.scss';
-import logo from '../../logo.svg';
+import logo from '../../assets/images/logo.svg';
+import homeIcon from '../../assets/icons/home.png';
+import aboutIcon from '../../assets/icons/id-card.png';
+import projectsIcon from '../../assets/icons/presentation.png';
+import cvIcon from '../../assets/icons/curriculum-vitae.png';
+import contactIcon from '../../assets/icons/arroba.png';
 import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <header className="App-header">
       <div className="header-logo">
@@ -13,29 +19,59 @@ export const Header = () => {
       <nav className="header-nav">
         <ul className="header-nav-list">
           <li className="header-nav-list-li">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="/">
+              <img
+                className="menu-icon"
+                src={homeIcon}
+                alt="home-icon"
+                style={{ width: 24, height: 24 }}
+              />
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="about">
+              <img
+                className="menu-icon"
+                src={aboutIcon}
+                alt="about-icon"
+                style={{ width: 24, height: 24 }}
+              />
               About
-            </a>
+            </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="projects">
+              <img
+                className="menu-icon"
+                src={projectsIcon}
+                alt="about-icon"
+                style={{ width: 24, height: 24 }}
+              />
               Projects
-            </a>
+            </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="my-cv">
+              <img
+                className="menu-icon"
+                src={cvIcon}
+                alt="cv-icon"
+                style={{ width: 24, height: 24 }}
+              />
               My CV
-            </a>
+            </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" to="contacts">
+              <img
+                className="menu-icon"
+                src={contactIcon}
+                alt="contact-icon"
+                style={{ width: 24, height: 24 }}
+              />
               Contacts
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

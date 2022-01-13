@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.scss';
 import { Header } from './components/Header/Header';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AppRouter } from './components/Router/Router';
 
-function App() {
+export const App: React.FC = () => {
   return (
     <div className="App">
-      <Header />
-      <main style={{ height: 2200 }}></main>
+      <Router>
+        <Header />
+        <main className="page-container">
+          <AppRouter />
+        </main>
+      </Router>
     </div>
   );
-}
-
-export default App;
+};

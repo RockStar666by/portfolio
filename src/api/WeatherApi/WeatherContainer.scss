@@ -1,6 +1,6 @@
 .weather-container {
   position: absolute;
-  right: 60px;
+  right: 10px;
   min-width: 200px;
   height: 80px;
   display: flex;
@@ -9,6 +9,7 @@
   font-size: 18px;
   font-weight: 500;
   border-radius: 10px;
+  padding-left: 10px;
   background: linear-gradient(
     45deg,
     rgb(158, 227, 211, 1),
