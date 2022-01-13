@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './WeatherContainer.scss';
-import { WeatherCard } from './WeatherCard';
+import { WeatherCard, weatherInfo } from './WeatherCard';
 
-export const WeatherAPI = () => {
-  const [weather, setWeather] = useState();
+const initWeatherInfo = {
+  location: {
+    region: '',
+  },
+  current: {
+    temp_c: '',
+    condition: {
+      icon: '',
+    },
+  },
+};
+
+export const WeatherAPI: React.FC = () => {
+  const [weather, setWeather] = useState<weatherInfo>(initWeatherInfo);
   const [isLoading, setIsLoading] = useState(true);
 
   const getIP = async () => {
@@ -24,9 +36,9 @@ export const WeatherAPI = () => {
     (async () => {
       try {
         const ip = await getIP();
-        const weather = await getWeather(ip);
+        const weatherData = await getWeather(ip);
         console.log('weather', weather);
-        setWeather(weather);
+        setWeather(weatherData);
         setIsLoading(false);
       } catch (err) {
         console.log(err);
@@ -44,7 +56,7 @@ export const WeatherAPI = () => {
           <div></div>
         </div>
       ) : (
-        <WeatherCard weatherInfo={weather}></WeatherCard>
+        <WeatherCard {...weather}></WeatherCard>
       )}
     </div>
   );
