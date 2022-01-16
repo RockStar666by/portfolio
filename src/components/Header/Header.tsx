@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/images/logo.svg';
@@ -10,8 +10,18 @@ import contactIcon from '../../assets/icons/arroba.png';
 import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
 export const Header: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () =>
+        setScrolled(window.pageYOffset > 200)
+      );
+    }
+  }, []);
+
   return (
-    <header className="App-header">
+    <header className={`App-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-logo">
         <img className="header-icon" src={logo} alt="header-logo" />
         <p className="header-text">My Portfolio</p>
