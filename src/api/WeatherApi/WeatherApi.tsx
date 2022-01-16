@@ -27,7 +27,7 @@ export const WeatherAPI: React.FC = () => {
 
   const getWeather = async (ip: string) => {
     const res = await axios.get(
-      `http://api.weatherapi.com/v1/current.json?key=5198d148123f46ba8f485733220201&q=${ip}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=5198d148123f46ba8f485733220201&q=${ip}&aqi=no`
     );
     return res.data;
   };
