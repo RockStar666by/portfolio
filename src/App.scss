@@ -1,0 +1,27 @@
+$bg-color: hsl(256, 256%, 256%);
+$dot-color: hsl(256, 33%, 70%);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 26px;
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-container {
+  min-height: calc(100vh - 300px);
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-image: radial-gradient(
+      at 16% 89%,
+      rgba(251, 159, 131, 0.2) 0,
+      transparent 100%
+    ),
+    radial-gradient(at 86% 42%, rgba(143, 226, 245, 0.2) 0, transparent 100%),
+    radial-gradient(at 9% 95%, rgba(230, 101, 191, 0.1) 0, transparent 100%);
+}

@@ -1,0 +1,124 @@
+.App-header {
+  z-index: 1;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-out 0s;
+}
+
+.scrolled {
+  .weather-container {
+    display: none;
+  }
+  height: 60px;
+  background-color: rgb(240, 248, 255, 0.5);
+  box-shadow: 0px 1px 5px 0px rgb(34 60 80 / 18%);
+  backdrop-filter: blur(15px);
+}
+
+.header-logo {
+  position: absolute;
+  left: 60px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  filter: invert(42%);
+}
+
+.header-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.header-text {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.header-nav {
+  position: absolute;
+  left: 300px;
+  margin: auto;
+}
+
+.header-nav-list {
+  list-style-type: none;
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav-list-li {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: grey;
+  border-radius: 10px;
+  background: white;
+
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
+  -moz-box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
+  box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
+}
+
+.header-nav-list-li:hover {
+  .menu-icon {
+    filter: invert(100%);
+  }
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: box-shadow 0.4s;
+  background: linear-gradient(
+    45deg,
+    rgb(158, 227, 211, 1),
+    rgb(65, 158, 172, 1)
+  );
+  box-shadow: 0 4px 15px 0 rgba(34, 189, 183, 0.75);
+  background-origin: border-box;
+  color: white;
+}
+
+.header-nav-list-li:focus {
+  outline: none;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(42%);
+}
+
+.active {
+  .menu-icon {
+    filter: invert(100%);
+  }
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    45deg,
+    rgb(158, 227, 211, 1),
+    rgb(65, 158, 172, 1)
+  );
+}
