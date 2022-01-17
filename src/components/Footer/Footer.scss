@@ -106,3 +106,19 @@
     rgb(65, 158, 172, 1)
   );
 }
+
+@media (max-width: 575.98px) {
+  .App-footer {
+    flex-direction: column-reverse;
+  }
+
+  .copyright {
+    left: auto;
+    margin-bottom: 20px;
+  }
+
+  .contacts-container {
+    right: auto;
+    margin-top: 20px;
+  }
+}

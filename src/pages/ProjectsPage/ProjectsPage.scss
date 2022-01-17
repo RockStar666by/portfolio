@@ -5,3 +5,10 @@
 
 .projects-page-container {
 }
+
+@media (max-width: 575.98px) {
+  .projects-image {
+    width: 300px;
+    height: 300px;
+  }
+}
