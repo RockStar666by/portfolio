@@ -50,7 +50,7 @@ export const MessageForm: React.FC = () => {
       }}
     >
       {({ setFieldValue }) => (
-        <Form className="user-form">
+        <Form className="input-container">
           <div className="label-container">
             <label htmlFor="username">Name:</label>
             <ErrorMessage

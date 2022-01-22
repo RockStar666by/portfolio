@@ -24,9 +24,9 @@
 }
 
 .user-form {
-  padding: 8px 0px;
-  max-width: 600px;
-  min-width: 350px;
+  padding: 8px 20px;
+  max-width: 700px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -49,6 +49,7 @@
 }
 
 .contacts-reply {
+  max-width: 100%;
   margin: 10px 0;
   font-size: 20px;
   font-weight: 300;
@@ -70,5 +71,28 @@
   .contacts-image {
     width: 300px;
     height: 300px;
+  }
+
+  .contacts-page-container {
+    margin: 0px 20px 50px;
+    flex-direction: column;
+  }
+
+  .divisor {
+    position: relative;
+    height: 5px;
+    width: calc(100% - 40px);
+    margin: 20px 0;
+  }
+
+  .social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-wrapper {
+    margin: auto;
   }
 }
