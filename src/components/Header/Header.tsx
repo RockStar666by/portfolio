@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/images/logo.svg';
 import homeIcon from '../../assets/icons/home.png';
@@ -11,23 +11,27 @@ import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [pageWidth, setPageWidth] = useState<number>();
   const burgerMenu = useRef<HTMLInputElement>(null);
+  const { pathname } = useLocation();
 
-  const onMenuButtonClick = () => {
-    if (burgerMenu.current && pageWidth) {
-      if (pageWidth < 576) burgerMenu.current.click();
-    }
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log('path');
+  }, [pathname]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () =>
         setScrolled(window.pageYOffset > 100)
       );
-      window.addEventListener('resize', () => setPageWidth(window.innerWidth));
     }
   }, []);
+
+  const onMenuButtonClick = () => {
+    if (burgerMenu.current) {
+      if (window.innerWidth < 576) burgerMenu.current.click();
+    }
+  };
 
   const preventScroll = () => {
     if (burgerMenu.current) {
