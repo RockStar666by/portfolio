@@ -11,19 +11,21 @@ import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [pageWidth, setPageWidth] = useState<number>();
   const burgerMenu = useRef<HTMLInputElement>(null);
 
   const onMenuButtonClick = () => {
-    if (burgerMenu.current) {
-      burgerMenu.current.click();
+    if (burgerMenu.current && pageWidth) {
+      if (pageWidth < 576) burgerMenu.current.click();
     }
   };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () =>
-        setScrolled(window.pageYOffset > 200)
+        setScrolled(window.pageYOffset > 100)
       );
+      window.addEventListener('resize', () => setPageWidth(window.innerWidth));
     }
   }, []);
 

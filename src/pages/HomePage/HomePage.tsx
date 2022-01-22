@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.scss';
-import programmingImage from '../../assets/images/code-typing-2.png';
+import programmingImage from '../../assets/images/Programming.png';
 import avatar from '../../assets/images/avatar2.png';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';

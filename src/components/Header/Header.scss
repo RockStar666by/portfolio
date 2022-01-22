@@ -59,7 +59,7 @@
 }
 
 .header-nav-list-li {
-  width: 120px;
+  width: 130px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@
   font-size: 18px;
   font-weight: 500;
   color: grey;
-  border-radius: 10px;
+  border-radius: 20px;
   background: white;
 
   -webkit-box-shadow: 0px 4px 15px 0px rgba(34, 60, 80, 0.1);
@@ -118,7 +118,7 @@
   .menu-icon {
     filter: invert(100%);
   }
-  border-radius: 10px;
+  border-radius: 20px;
   color: white;
   background: linear-gradient(
     45deg,
@@ -129,7 +129,13 @@
 
 @media (max-width: 575.98px) {
   .header-logo {
-    display: none;
+    left: auto;
+    right: 20px;
+  }
+
+  .nav-link {
+    padding: 0 20px;
+    justify-content: space-between;
   }
 
   .App-header {

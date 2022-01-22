@@ -14,14 +14,16 @@ $dot-space: 26px;
 }
 
 .page-container {
+  position: relative;
   min-height: calc(100vh - 300px);
   padding-top: 100px;
   padding-bottom: 200px;
-  background-image: radial-gradient(
-      at 16% 89%,
-      rgba(251, 159, 131, 0.2) 0,
-      transparent 100%
-    ),
-    radial-gradient(at 86% 42%, rgba(143, 226, 245, 0.2) 0, transparent 100%),
-    radial-gradient(at 9% 95%, rgba(230, 101, 191, 0.1) 0, transparent 100%);
+  // background-image: radial-gradient(
+  //     at 16% 89%,
+  //     rgba(251, 159, 131, 0.2) 0,
+  //     transparent 100%
+  //   ),
+  //   radial-gradient(at 86% 42%, rgba(143, 226, 245, 0.2) 0, transparent 100%),
+  //   radial-gradient(at 9% 95%, rgba(230, 101, 191, 0.1) 0, transparent 100%);
+  background: white;
 }
