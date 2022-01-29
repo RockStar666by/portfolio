@@ -9,7 +9,7 @@ export const projects = [
     image: images.img1,
     stack: ['React', 'TypeScript', 'Formik'],
     linkGithub: 'https://github.com/RockStar666by/portfolio',
-    linkDemo: 'https://portfolio-git-dev-rockstar666by.vercel.app/',
+    linkDemo: 'https://portfolio-rockstar666by.vercel.app/',
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const projects = [
     image: images.img1,
     stack: ['React', 'TypeScript', 'Formik'],
     linkGithub: 'https://github.com/RockStar666by/portfolio',
-    linkDemo: 'https://portfolio-git-dev-rockstar666by.vercel.app/',
+    linkDemo: 'https://portfolio-rockstar666by.vercel.app/',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const projects = [
     image: images.img1,
     stack: ['React', 'TypeScript', 'Formik'],
     linkGithub: 'https://github.com/RockStar666by/portfolio',
-    linkDemo: 'https://portfolio-git-dev-rockstar666by.vercel.app/',
+    linkDemo: 'https://portfolio-rockstar666by.vercel.app/',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const projects = [
     image: images.img1,
     stack: ['React', 'TypeScript', 'Formik'],
     linkGithub: 'https://github.com/RockStar666by/portfolio',
-    linkDemo: 'https://portfolio-git-dev-rockstar666by.vercel.app/',
+    linkDemo: 'https://portfolio-rockstar666by.vercel.app/',
   },
   {
     id: 5,
@@ -49,6 +49,6 @@ export const projects = [
     image: images.img1,
     stack: ['React', 'TypeScript', 'Formik'],
     linkGithub: 'https://github.com/RockStar666by/portfolio',
-    linkDemo: 'https://portfolio-git-dev-rockstar666by.vercel.app/',
+    linkDemo: 'https://portfolio-rockstar666by.vercel.app/',
   },
 ];
