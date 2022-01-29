@@ -1,0 +1,135 @@
+.input-container {
+  padding: 8px 0px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  min-height: 40px;
+  margin: 5px 0 20px 0px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  color: grey;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgb(34 60 80 / 10%);
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  &::placeholder {
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.textarea {
+  height: 120px;
+  resize: none;
+}
+
+.choose-file {
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+.label-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field::-webkit-file-upload-button {
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-right: solid grey 3px;
+  &:hover {
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: box-shadow 0.4s;
+    background: linear-gradient(
+      45deg,
+      rgb(158, 227, 211, 1),
+      rgb(65, 158, 172, 1)
+    );
+    box-shadow: 0 4px 15px 0 rgba(34, 189, 183, 0.75);
+    background-origin: border-box;
+    color: white;
+  }
+}
+
+.error-message {
+  color: red;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.add-file {
+  width: 100%;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  color: grey;
+}
+
+.send-button {
+  width: 150px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 200;
+  color: grey;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgb(34 60 80 / 10%);
+  border: none;
+}
+
+.send-button:hover {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: box-shadow 0.4s;
+  background: linear-gradient(
+    45deg,
+    rgb(158, 227, 211, 1),
+    rgb(65, 158, 172, 1)
+  );
+  box-shadow: 0 4px 15px 0 rgba(34, 189, 183, 0.75);
+  background-origin: border-box;
+  color: white;
+}
+
+.message2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  border-radius: 20px;
+  background: rgb(255, 255, 255, 0.7);
+  z-index: 0;
+  filter: drop-shadow(0px 4px 15px rgba(34, 60, 80, 0.1));
+}
+
+@media (max-width: 575.98px) {
+  .contacts-image {
+    width: 300px;
+    height: 300px;
+  }
+}

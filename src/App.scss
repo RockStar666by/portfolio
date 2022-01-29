@@ -14,14 +14,30 @@ $dot-space: 26px;
 }
 
 .page-container {
-  min-height: calc(100vh - 300px);
+  position: relative;
+  min-height: calc(100vh - 250px);
   padding-top: 100px;
-  padding-bottom: 200px;
-  background-image: radial-gradient(
-      at 16% 89%,
-      rgba(251, 159, 131, 0.2) 0,
-      transparent 100%
-    ),
-    radial-gradient(at 86% 42%, rgba(143, 226, 245, 0.2) 0, transparent 100%),
-    radial-gradient(at 9% 95%, rgba(230, 101, 191, 0.1) 0, transparent 100%);
+  padding-bottom: 150px;
+
+  // background: url('./assets/images/background.jpg') no-repeat center center
+  //   fixed;
+  // background-size: cover;
+
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
+  background-attachment: fixed;
+}
+
+@media (max-width: 575.98px) {
+  .page-container {
+    min-height: calc(100vh - 300px);
+    padding-bottom: 200px;
+  }
 }

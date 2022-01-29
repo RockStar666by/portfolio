@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/images/logo.svg';
 import homeIcon from '../../assets/icons/home.png';
@@ -11,14 +11,34 @@ import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const burgerMenu = useRef<HTMLInputElement>(null);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () =>
-        setScrolled(window.pageYOffset > 200)
+        setScrolled(window.pageYOffset > 100)
       );
     }
   }, []);
+
+  const onMenuButtonClick = () => {
+    if (burgerMenu.current) {
+      if (window.innerWidth < 576) burgerMenu.current.click();
+    }
+  };
+
+  const preventScroll = () => {
+    if (burgerMenu.current) {
+      burgerMenu.current.checked
+        ? document.body.setAttribute('style', 'overflow: hidden;')
+        : document.body.setAttribute('style', 'overflow: visible;');
+    }
+  };
 
   return (
     <header className={`App-header ${scrolled ? 'scrolled' : ''}`}>
@@ -26,10 +46,20 @@ export const Header: React.FC = () => {
         <img className="header-icon" src={logo} alt="header-logo" />
         <p className="header-text">My Portfolio</p>
       </div>
+      <input
+        ref={burgerMenu}
+        id="menu__toggle"
+        type="checkbox"
+        onChange={preventScroll}
+      />
+      <label className="menu__btn" htmlFor="menu__toggle">
+        <span></span>
+      </label>
+      <div className="burger-prevent-click"></div>
       <nav className="header-nav">
         <ul className="header-nav-list">
           <li className="header-nav-list-li">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/" onClick={onMenuButtonClick}>
               <img
                 className="menu-icon"
                 src={homeIcon}
@@ -40,7 +70,11 @@ export const Header: React.FC = () => {
             </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <NavLink className="nav-link" to="about">
+            <NavLink
+              className="nav-link"
+              to="about"
+              onClick={onMenuButtonClick}
+            >
               <img
                 className="menu-icon"
                 src={aboutIcon}
@@ -51,7 +85,11 @@ export const Header: React.FC = () => {
             </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <NavLink className="nav-link" to="projects">
+            <NavLink
+              className="nav-link"
+              to="projects"
+              onClick={onMenuButtonClick}
+            >
               <img
                 className="menu-icon"
                 src={projectsIcon}
@@ -62,7 +100,11 @@ export const Header: React.FC = () => {
             </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <NavLink className="nav-link" to="my-cv">
+            <NavLink
+              className="nav-link"
+              to="my-cv"
+              onClick={onMenuButtonClick}
+            >
               <img
                 className="menu-icon"
                 src={cvIcon}
@@ -73,7 +115,11 @@ export const Header: React.FC = () => {
             </NavLink>
           </li>
           <li className="header-nav-list-li">
-            <NavLink className="nav-link" to="contacts">
+            <NavLink
+              className="nav-link"
+              to="contacts"
+              onClick={onMenuButtonClick}
+            >
               <img
                 className="menu-icon"
                 src={contactIcon}
