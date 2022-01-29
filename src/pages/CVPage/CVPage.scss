@@ -1,0 +1,11 @@
+.cv-container {
+  height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv-image {
+  max-height: calc(100vh - 400px);
+}

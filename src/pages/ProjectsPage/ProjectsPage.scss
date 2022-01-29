@@ -1,9 +1,11 @@
-.projects-image {
-  width: 500px;
-  height: 500px;
-}
-
-.projects-page-container {
+.projects-container {
+  margin: 0 auto;
+  padding: 0 20px 50px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  place-content: center;
+  grid-gap: 20px;
 }
 
 @media (max-width: 575.98px) {

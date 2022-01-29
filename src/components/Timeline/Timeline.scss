@@ -1,0 +1,127 @@
+.timeline-wrapper {
+  display: flex;
+}
+
+.timeline-container {
+  position: relative;
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: 0 auto;
+  left: -5px;
+  background: linear-gradient(grey, grey) no-repeat center/4px 100%;
+  .post {
+    width: calc(50% - 80px);
+    float: left;
+    padding: 20px;
+    clear: both;
+    text-align: right;
+    &:not(:first-child) {
+      margin-top: -60px;
+    }
+    .title {
+      font-size: 32px;
+      margin-bottom: 12px;
+      position: relative;
+      color: #000;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: 4px solid grey;
+        background-color: #1d1d1d;
+        border-radius: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -68px;
+        z-index: 0;
+      }
+      &.big:before {
+        width: 24px;
+        height: 24px;
+        transform: translate(8px, -50%);
+      }
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: black;
+      p {
+        line-height: 1.4em;
+      }
+    }
+    &:nth-child(2n) {
+      text-align: left;
+      float: right;
+      .title {
+        &:before {
+          left: -68px;
+        }
+        &.big:before {
+          transform: translate(-8px, -50%);
+        }
+      }
+      .body {
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  width: 170px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    rgb(158, 227, 211, 1),
+    rgb(65, 158, 172, 1)
+  );
+  box-shadow: 0px 4px 15px 0px rgb(34 60 80 / 10%);
+  border: none;
+}
+
+.link:hover {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: box-shadow 0.4s;
+
+  box-shadow: 0 4px 15px 0 rgba(34, 189, 183, 0.75);
+  background-origin: border-box;
+  color: white;
+}
+
+@media (max-width: 575.98px) {
+  .timeline-container {
+    background: none;
+    .post {
+      width: 100%;
+      &:not(:first-child) {
+        margin-top: 0px;
+      }
+      .title {
+        margin-bottom: 0px;
+        &:before {
+          width: 0;
+          height: 0;
+          border: none;
+          right: 0px;
+        }
+        &.big:before {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+}
