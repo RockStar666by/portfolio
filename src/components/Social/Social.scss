@@ -72,19 +72,6 @@
   filter: invert(42%);
 }
 
-.active {
-  .social-icon {
-    filter: invert(100%);
-  }
-  border-radius: 20px;
-  color: white;
-  background: linear-gradient(
-    45deg,
-    rgb(158, 227, 211, 1),
-    rgb(65, 158, 172, 1)
-  );
-}
-
 @media (max-width: 575.98px) {
   .App-footer {
     flex-direction: column-reverse;

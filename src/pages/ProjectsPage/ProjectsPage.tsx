@@ -7,7 +7,7 @@ import { projects } from './projects.js';
 
 const pageInfo = {
   header: 'My projects.',
-  text: 'Check out my latest projects here. What do you think?',
+  text: 'Check out my latest projects. \n What do you think?',
   image: projectImage,
 };
 

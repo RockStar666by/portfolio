@@ -1,12 +1,40 @@
-.prog-image {
+.avatar-image {
   width: 500px;
   height: 500px;
+  // outline: 20px solid white;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.055);
+  backdrop-filter: blur(15px);
+  border: 10px solid white;
+  border-radius: 50%;
+}
+
+.avatar-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-background-circle {
+  position: absolute;
+  left: calc(100% - 510px);
+  top: 100px;
+  width: 1220px;
+  height: 1220px;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  border-radius: 50%;
 }
 
 .hello-wrapper {
   position: relative;
-  max-width: 1100px;
-  height: calc(100vh - 150px);
+  max-width: 1300px;
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,38 +44,48 @@
 
 .hello-container {
   position: relative;
-  width: 520px;
+  width: 770px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  // background-color: rgb(0, 158, 0, 0.1);
 }
 
 .message {
   position: relative;
   margin: 10px;
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 50px;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 80px;
   text-align: left;
-  border-radius: 20px 20px 0 20px;
   padding: 8px 15px;
   display: inline-block;
-  background: rgb(255, 255, 255, 1);
   z-index: 0;
-  filter: drop-shadow(0px 4px 5px rgba(34, 60, 80, 0.4));
+  white-space: pre-line;
 }
 
-.message:after {
-  content: '';
-  position: absolute;
-  bottom: 0px;
-  right: -20px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 20px 0 0 20px;
-  border-color: transparent transparent transparent rgb(255, 255, 255, 1);
+.description {
+  position: relative;
+  margin: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  padding: 8px 15px;
+  display: inline-block;
+  z-index: 0;
 }
+
+// .message:after {
+//   content: '';
+//   position: absolute;
+//   bottom: 0px;
+//   right: -20px;
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+//   border-width: 20px 0 0 20px;
+//   border-color: transparent transparent transparent rgb(255, 255, 255, 1);
+// }
 
 .container {
   position: relative;
@@ -110,12 +148,12 @@
   padding-right: 30px;
 }
 
-.button {
+.hire-button {
   font-size: 25px;
   line-height: 30px;
   width: 200px;
   height: 80px;
-  margin: 0 auto;
+  margin: 50px auto 0px;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -199,7 +237,7 @@
     line-height: 30px;
   }
 
-  .prog-image {
+  .avatar-image {
     width: 200px;
     height: 200px;
   }
