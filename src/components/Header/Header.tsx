@@ -7,7 +7,6 @@ import aboutIcon from '../../assets/icons/id-card.png';
 import projectsIcon from '../../assets/icons/presentation.png';
 import cvIcon from '../../assets/icons/curriculum-vitae.png';
 import contactIcon from '../../assets/icons/arroba.png';
-import { WeatherAPI } from '../../api/WeatherApi/WeatherApi';
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,8 +42,7 @@ export const Header: React.FC = () => {
   return (
     <header className={`App-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-logo">
-        <img className="header-icon" src={logo} alt="header-logo" />
-        <p className="header-text">My Portfolio</p>
+        <p className="header-text">S A U C H U K</p>
       </div>
       <input
         ref={burgerMenu}
@@ -131,7 +129,6 @@ export const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <WeatherAPI />
     </header>
   );
 };

@@ -34,7 +34,7 @@ export const Timeline: React.FC = () => {
               className="link"
               href="https://app.rs.school/certificate/2faovg51"
             >
-              See certificate
+              View certificate
             </a>
           </div>
         </div>
@@ -49,7 +49,7 @@ export const Timeline: React.FC = () => {
               className="link"
               href="https://app.rs.school/certificate/ith7gxcc"
             >
-              See certificate
+              View certificate
             </a>
           </div>
         </div>

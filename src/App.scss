@@ -18,11 +18,6 @@ $dot-space: 26px;
   min-height: calc(100vh - 250px);
   padding-top: 100px;
   padding-bottom: 150px;
-
-  // background: url('./assets/images/background.jpg') no-repeat center center
-  //   fixed;
-  // background-size: cover;
-
   background: linear-gradient(
         90deg,
         $bg-color ($dot-space - $dot-size),
@@ -33,6 +28,7 @@ $dot-space: 26px;
     $dot-color;
   background-size: $dot-space $dot-space;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 @media (max-width: 575.98px) {

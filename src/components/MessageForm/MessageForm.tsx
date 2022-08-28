@@ -98,7 +98,7 @@ export const MessageForm: React.FC = () => {
             type="text"
           />
 
-          <label htmlFor="file">Choose a file &#40;optional&#41;:</label>
+          {/* <label htmlFor="file">Choose a file &#40;optional&#41;:</label>
           <Field
             innerRef={fileRef}
             className="input-field choose-file"
@@ -111,7 +111,7 @@ export const MessageForm: React.FC = () => {
                 setFieldValue('file', event.target.files[0]);
               }
             }}
-          />
+          /> */}
 
           <button className="send-button" type="submit">
             Send
