@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Header.scss';
-import logo from '../../assets/images/logo.svg';
 import homeIcon from '../../assets/icons/home.png';
 import aboutIcon from '../../assets/icons/id-card.png';
 import projectsIcon from '../../assets/icons/presentation.png';
@@ -27,7 +26,7 @@ export const Header: React.FC = () => {
 
   const onMenuButtonClick = () => {
     if (burgerMenu.current) {
-      if (window.innerWidth < 576) burgerMenu.current.click();
+      if (window.innerWidth < 1025) burgerMenu.current.click();
     }
   };
 
