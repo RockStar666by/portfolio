@@ -45,6 +45,7 @@
 .hello-wrapper {
   position: relative;
   max-width: 1300px;
+  min-height: 800px;
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: row;
@@ -63,7 +64,7 @@
 
 .image-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .message {
@@ -234,6 +235,6 @@
 @media (max-width: 769px) {
   .hello-wrapper {
     flex-direction: column-reverse;
-    justify-content: baseline;
+    justify-content: flex-end;
   }
 }
