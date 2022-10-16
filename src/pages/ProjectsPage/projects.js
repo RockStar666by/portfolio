@@ -20,4 +20,14 @@ export const projects = [
     linkGithub: 'https://github.com/RockStar666by/entry-react-developer-test',
     linkDemo: 'https://react-ecommerce2-phi.vercel.app/',
   },
+  {
+    id: 3,
+    header: 'Currency Info',
+    description:
+      'Provides information about currency and its dynamics. Has built-in currency converter',
+    image: images.img3,
+    stack: ['React', 'AntDesign'],
+    linkGithub: 'https://github.com/RockStar666by/npc-test',
+    linkDemo: 'https://npc-test.vercel.app/',
+  },
 ];
