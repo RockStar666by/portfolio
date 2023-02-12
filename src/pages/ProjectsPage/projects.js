@@ -30,4 +30,14 @@ export const projects = [
     linkGithub: 'https://github.com/RockStar666by/npc-test',
     linkDemo: 'https://npc-test.vercel.app/',
   },
+  {
+    id: 4,
+    header: 'Animated Mobile App Download Page',
+    description:
+      'Animated Mobile App page with adaptive design and brief information on app',
+    image: images.img4,
+    stack: ['React'],
+    linkGithub: 'https://github.com/RockStar666by/917-world-test',
+    linkDemo: 'https://917-world-test.vercel.app/',
+  },
 ];
