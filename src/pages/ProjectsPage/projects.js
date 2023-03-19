@@ -40,4 +40,13 @@ export const projects = [
     linkGithub: 'https://github.com/RockStar666by/917-world-test',
     linkDemo: 'https://917-world-test.vercel.app/',
   },
+  {
+    id: 5,
+    header: 'Travel Agency Landing Page',
+    description: 'Responsive Travel Agency Landing Page with Form Validation',
+    image: images.img5,
+    stack: ['React'],
+    linkGithub: 'https://github.com/RockStar666by/travel-landing',
+    linkDemo: 'https://travel-landing-theta.vercel.app/',
+  },
 ];
