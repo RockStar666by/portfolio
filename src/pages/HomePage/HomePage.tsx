@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HomePage.scss';
-import avatar from '../../assets/images/avatar2.png';
+import avatar from '../../assets/images/avatar2.webp';
 import { Link } from 'react-router-dom';
 
 export const HomePage: React.FC = () => {
+  const [loader, setLoader] = useState(false);
+
   return (
     <>
       <section className="hello-wrapper">
@@ -19,7 +21,12 @@ export const HomePage: React.FC = () => {
         </div>
         {/* <div className="avatar-background-circle"></div> */}
         <div className="image-container">
-          <img className="avatar-image" src={avatar} alt="avatar-image" />
+          <img
+            className={`avatar-image ${loader ? 'animated' : null}`}
+            src={avatar}
+            alt="avatar-image"
+            onLoad={() => setLoader(true)}
+          />
         </div>
       </section>
     </>

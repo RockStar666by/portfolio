@@ -1,6 +1,7 @@
 import * as images from '../../assets/images/projectPreviews/index.js';
+import { TProject } from '../../types/index.js';
 
-export const projects = [
+export const projects: TProject[] = [
   {
     id: 1,
     header: 'Portfolio',

@@ -8,6 +8,11 @@
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.avatar-image.animated {
+  animation-play-state: running;
 }
 
 @keyframes fadeInAnimation {

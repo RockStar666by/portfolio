@@ -3,7 +3,7 @@ import projectImage from '../../assets/images/Project.png';
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard';
 import './ProjectsPage.scss';
 import { PageInfo } from '../../components/PageInfo/PageInfo';
-import { projects } from './projects.js';
+import { projects } from './projects';
 
 const pageInfo = {
   header: 'My projects.',
